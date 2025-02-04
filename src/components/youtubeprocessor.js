@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import * as S from "./styles"; // styles.js에서 가져오기
+import logo from "../assets/logo.png"; // 로고 이미지 가져오기
 
 const YouTubeProcessor = () => {
   const [videoUrl, setVideoUrl] = useState("");
@@ -33,32 +34,36 @@ const YouTubeProcessor = () => {
   };
 
   return (
-    <S.Container>
-      <h1>YouTube Skip</h1>
-      <S.Form onSubmit={handleSubmit}>
-        <S.Label htmlFor="videoUrl">YouTube Video URL:</S.Label>
-        <S.Input
-          type="text"
-          id="videoUrl"
-          value={videoUrl}
-          onChange={(e) => setVideoUrl(e.target.value)}
-          required
-        />
-        <S.Button type="submit">Process</S.Button>
-      </S.Form>
-      {loading && <S.Message>Processing...</S.Message>}
-      {error && <S.Message error>{error}</S.Message>}
-      {summary && (
-        <S.SummaryContainer>
-          <h2>요약</h2>
-          <S.SummaryText
-            dangerouslySetInnerHTML={{
-              __html: formatSummary(summary),
-            }}
-          ></S.SummaryText>
-        </S.SummaryContainer>
-      )}
-    </S.Container>
+    <>
+      <S.GlobalStyle />
+      <S.Container>
+        <S.Logo src={logo} alt="Logo" />
+        <h1>YouTube Skip</h1>
+        <S.Form onSubmit={handleSubmit}>
+          <S.Label htmlFor="videoUrl">YouTube Video URL:</S.Label>
+          <S.Input
+            type="text"
+            id="videoUrl"
+            value={videoUrl}
+            onChange={(e) => setVideoUrl(e.target.value)}
+            required
+          />
+          <S.Button type="submit">요약하기</S.Button>
+        </S.Form>
+        {loading && <S.Message>Processing...</S.Message>}
+        {error && <S.Message error>{error}</S.Message>}
+        {summary && (
+          <S.SummaryContainer>
+            <h2>요약</h2>
+            <S.SummaryText
+              dangerouslySetInnerHTML={{
+                __html: formatSummary(summary),
+              }}
+            ></S.SummaryText>
+          </S.SummaryContainer>
+        )}
+      </S.Container>
+    </>
   );
 };
 
