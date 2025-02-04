@@ -8,7 +8,7 @@
 ## 작동법 
 
 <details>
-  <summary>작동법</summery>
+  <summary>작동법</summary>
 
   ### 라이브러리 설치 
   ```bash
