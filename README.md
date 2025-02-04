@@ -22,4 +22,7 @@
   ```
 
 프론트 서버 시동시 3000의 포트로 서버 자동실행
+
+[백엔드 서버 시동법](https://github.com/Dev-KUN-F/youtube-skip-server) 
+
 </details>
