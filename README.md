@@ -1,3 +1,9 @@
+# 개요
+
+![youtube-skip-main](https://github.com/user-attachments/assets/12ae0e72-fde0-4c70-b33f-9797cae137c3)
+
+> 다보기엔 너무 지루한 유튜브영상을 텍스트로 요약해주는 웹서비스!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
