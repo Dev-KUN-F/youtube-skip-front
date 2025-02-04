@@ -28,11 +28,11 @@
 </details>
 
 ### 기술스택 
-React
-JavaScript
-Styled-commponents
-Node.js
-Axios
+- React
+- JavaScript
+- Styled-commponents
+- Node.js
+- Axios
 
 
 ### 문제점 
